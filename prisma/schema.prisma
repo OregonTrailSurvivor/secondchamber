@@ -76,3 +76,10 @@ model Authenticator {
  
   @@id([userId, credentialID])
 }
+
+model Products {
+  id Int @id @default(autoincrement())
+  name         String @unique
+  price        Decimal @db.Decimal(10,2)
+  description  String
+}
